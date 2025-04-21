@@ -1,0 +1,167 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Main container */
+div {
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Header */
+h1 {
+    font-size: 2.8rem;
+    color: #006d77;
+    margin-bottom: 10px;
+}
+
+/* Link styles with 3D hover effect */
+a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #0077b6;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+a:hover {
+    transform: translateY(-2px);
+}
+
+/* Image & Description */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+table img {
+    height: 200px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+table img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+section h2 {
+    color: #023e8a;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #caf0f8;
+    padding-bottom: 5px;
+}
+
+/* Subheadings */
+h3 {
+    color: #0077b6;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* List styling */
+ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Project and link effects */
+section ul li p {
+    margin-bottom: 5px;
+}
+
+ul li a {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #edf6f9;
+    box-shadow: 0 4px 0 #0077b6;
+    transition: all 0.2s ease;
+}
+
+ul li a:hover {
+    background-color: #d9f2ff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 119, 182, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    table, table tr, table td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    table img {
+        margin: auto;
+        height: auto;
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
